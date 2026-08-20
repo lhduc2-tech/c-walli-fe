@@ -79,7 +79,11 @@ async function handleSubmit() {
           <option value="ACTIVE">ACTIVE (Hoạt động bình thường)</option>
           <option value="LOCKED">LOCKED (Khóa do bảo mật)</option>
           <option value="SUSPENDED">SUSPENDED (Tạm đình chỉ giao dịch)</option>
+          <option value="RISK">RISK (Tài khoản rủi ro / vi phạm)</option>
           <option value="INACTIVE">INACTIVE (Vô hiệu hóa)</option>
+          <option value="UNLINKED">UNLINKED (Chưa liên kết nhà mạng)</option>
+          <option value="PENDING">PENDING (Chờ duyệt)</option>
+          <option value="PENDING_EMAIL_VERIFICATION">PENDING_EMAIL_VERIFICATION (Chờ xác thực Email)</option>
         </select>
       </div>
 

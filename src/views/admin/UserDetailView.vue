@@ -93,7 +93,12 @@ function getStatusBadgeVariant(status?: string) {
     case 'ACTIVE': return 'success'
     case 'LOCKED': return 'destructive'
     case 'SUSPENDED': return 'warning'
+    case 'RISK': return 'risk'
     case 'INACTIVE': return 'secondary'
+    case 'DELETED': return 'secondary'
+    case 'UNLINKED': return 'secondary'
+    case 'PENDING': return 'info'
+    case 'PENDING_EMAIL_VERIFICATION': return 'info'
     default: return 'outline'
   }
 }

@@ -233,8 +233,12 @@ function getStatusBadgeVariant(status: string) {
     case 'ACTIVE': return 'success'
     case 'LOCKED': return 'destructive'
     case 'SUSPENDED': return 'warning'
+    case 'RISK': return 'risk'
     case 'INACTIVE': return 'secondary'
+    case 'DELETED': return 'secondary'
+    case 'UNLINKED': return 'secondary'
     case 'PENDING': return 'info'
+    case 'PENDING_EMAIL_VERIFICATION': return 'info'
     default: return 'outline'
   }
 }
@@ -349,8 +353,12 @@ onMounted(() => {
             <option value="ACTIVE">ACTIVE (Hoạt động)</option>
             <option value="LOCKED">LOCKED (Khóa)</option>
             <option value="SUSPENDED">SUSPENDED (Tạm đình chỉ)</option>
+            <option value="RISK">RISK (Tài khoản rủi ro)</option>
             <option value="INACTIVE">INACTIVE (Vô hiệu)</option>
+            <option value="UNLINKED">UNLINKED (Chưa liên kết)</option>
             <option value="PENDING">PENDING (Chờ duyệt)</option>
+            <option value="PENDING_EMAIL_VERIFICATION">PENDING_EMAIL_VERIFICATION (Chờ xác thực Email)</option>
+            <option value="DELETED">DELETED (Đã xóa)</option>
           </select>
         </div>
 
@@ -376,8 +384,8 @@ onMounted(() => {
             class="flex h-9 w-full rounded-lg border border-zinc-300 bg-white px-3 py-1.5 text-xs text-zinc-900 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-black"
           >
             <option value="">Tất cả eKYC</option>
-            <option value="VERIFIED">VERIFIED (Đã xác minh)</option>
-            <option value="PENDING">PENDING (Chờ xử lý)</option>
+            <option value="VERIFIED">VERIFIED (Đã xác thực eKYC)</option>
+            <option value="NOT_VERIFIED">NOT_VERIFIED (Chưa xác thực eKYC)</option>
           </select>
         </div>
 

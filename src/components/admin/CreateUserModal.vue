@@ -160,6 +160,7 @@ async function handleSubmit() {
           >
             <option value="ACTIVE">ACTIVE (Hoạt động)</option>
             <option value="PENDING">PENDING (Chờ duyệt)</option>
+            <option value="PENDING_EMAIL_VERIFICATION">PENDING_EMAIL_VERIFICATION (Chờ xác thực Email)</option>
             <option value="LOCKED">LOCKED (Khóa)</option>
           </select>
         </div>
