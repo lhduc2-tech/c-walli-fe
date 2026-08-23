@@ -7,7 +7,8 @@ import {
   LogOut,
   Menu,
   X,
-  ChevronRight
+  ChevronRight,
+  ShieldAlert
 } from 'lucide-vue-next'
 
 const router = useRouter()
@@ -72,6 +73,20 @@ function handleLogout() {
         >
           <Users class="h-4 w-4" />
           <span>Quản lý Người dùng</span>
+        </router-link>
+
+        <router-link
+          to="/admin/fraud-alerts"
+          class="flex items-center gap-3 px-3.5 py-2.5 rounded-xl text-sm font-medium transition-all"
+          :class="[
+            route.path.startsWith('/admin/fraud-alerts')
+              ? 'bg-black text-white font-semibold shadow-sm'
+              : 'text-zinc-600 hover:text-zinc-900 hover:bg-zinc-100',
+          ]"
+          @click="isMobileMenuOpen = false"
+        >
+          <ShieldAlert class="h-4 w-4" />
+          <span>Fraud Alerts</span>
         </router-link>
       </div>
 

@@ -29,6 +29,11 @@ const router = createRouter({
           name: 'admin-user-detail',
           component: () => import('@/views/admin/UserDetailView.vue'),
         },
+        {
+          path: 'fraud-alerts',
+          name: 'admin-fraud-alerts',
+          component: () => import('@/views/admin/FraudAlertListView.vue'),
+        },
       ],
     },
     {
